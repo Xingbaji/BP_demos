@@ -1,6 +1,6 @@
 # Official media sources
 
-Checked on 2026-08-25. Video is supporting material for the article-first research index. The deployed site loads only the official project-page MP4 files or official YouTube embeds below. Downloaded working copies under `~/bp_demo` are not part of the site repository.
+Checked on 2026-08-25. Video is supporting material for the research page. The deployed site loads only the official project-page MP4 files or official YouTube embeds below. Downloaded working copies under `~/bp_demo` are not part of the site repository.
 
 | Work | Player source | Type | Check |
 |---|---|---|---|
