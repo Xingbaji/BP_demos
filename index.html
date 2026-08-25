@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#07110f" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <meta
+      name="description"
+      content="万殊智能（MYRIFORM）团队研究与物理智能 Demo 档案。"
+    />
+    <title>Research Atlas · MYRIFORM</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <script src="./assets/config.js"></script>
+    <script type="module" src="./assets/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#work">跳至作品</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="MYRIFORM 首页">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span class="brand-copy">
+          <strong>MYRIFORM</strong>
+          <span>万殊智能</span>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="主导航">
+        <a href="#thesis">能力链</a>
+        <a href="#work">研究档案</a>
+        <a href="#about">证据边界</a>
+      </nav>
+
+      <a class="header-cta" href="#work">View demos <span>↘</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <img
+            src="./assets/posters/pncg.jpg"
+            alt=""
+            width="1600"
+            height="900"
+            fetchpriority="high"
+          />
+          <div class="hero-scrim"></div>
+          <div class="hero-grid"></div>
+        </div>
+
+        <div class="hero-content">
+          <p class="eyebrow"><span></span> Infrastructure for Physical Intelligence</p>
+          <h1 id="hero-title">
+            从真实世界，
+            <span>到可交互模型。</span>
+          </h1>
+          <p class="hero-lede">
+            一份沿着 Reality → Geometry → Contact Physics → Synthetic Experience →
+            Interactive Model 展开的研究与 Demo 档案。
+          </p>
+
+          <div class="hero-actions">
+            <button class="button button-primary" type="button" data-open-featured>
+              <span class="play-icon" aria-hidden="true">▶</span>
+              播放精选 Demo
+            </button>
+            <a class="button button-ghost" href="#thesis">浏览能力链</a>
+          </div>
+        </div>
+
+        <div class="hero-meta" aria-label="档案信息">
+          <div><span>FORMAT</span><strong>RESEARCH ATLAS</strong></div>
+          <div><span>SCOPE</span><strong>06 CHAPTERS</strong></div>
+          <div><span>STATUS</span><strong>INTERNAL PREVIEW</strong></div>
+        </div>
+
+        <a class="scroll-cue" href="#thesis" aria-label="向下浏览">
+          <span>SCROLL TO EXPLORE</span><i aria-hidden="true"></i>
+        </a>
+      </section>
+
+      <section class="thesis section-shell" id="thesis" aria-labelledby="thesis-title">
+        <div class="section-label">01 — CAPABILITY CHAIN</div>
+        <div class="thesis-heading">
+          <h2 id="thesis-title">研究不是一组孤立项目，<br />而是一条连续的能力链。</h2>
+          <p>
+            网站以问题链组织成果，而非按论文年份堆叠。每个章节回答一个物理智能基础设施问题，
+            并把公开视频、论文出处与团队角色放在同一张证据卡中。
+          </p>
+        </div>
+
+        <ol class="chapter-rail" data-chapter-rail aria-label="能力链章节"></ol>
+      </section>
+
+      <section class="work section-shell" id="work" aria-labelledby="work-title">
+        <div class="work-heading">
+          <div>
+            <div class="section-label">02 — SELECTED WORK</div>
+            <h2 id="work-title">精选研究与 Demo</h2>
+          </div>
+          <p>点击卡片播放。视频仅在用户请求后加载，避免首页一次性下载大文件。</p>
+        </div>
+
+        <div class="filters" data-filters aria-label="按能力链筛选">
+          <button type="button" class="filter is-active" data-filter="all">全部 <span>06</span></button>
+        </div>
+
+        <div class="project-grid" data-project-grid></div>
+
+        <noscript>
+          <p class="noscript">请启用 JavaScript 以浏览视频档案。</p>
+        </noscript>
+      </section>
+
+      <section class="statement" id="about" aria-labelledby="statement-title">
+        <div class="statement-inner section-shell">
+          <div class="section-label section-label-light">03 — EVIDENCE BOUNDARY</div>
+          <h2 id="statement-title">让每个画面知道自己能证明什么。</h2>
+          <div class="statement-grid">
+            <p class="statement-lede">
+              公开论文、团队研究、内部实验与公司产品是四类不同证据。
+              这个网站把来源和边界做成界面的一部分。
+            </p>
+            <div class="evidence-list">
+              <div><span class="evidence-dot public"></span><strong>公开论文</strong><p>题名、会议状态与项目页可定位。</p></div>
+              <div><span class="evidence-dot research"></span><strong>团队研究</strong><p>证明成员能力，不自动等于公司产品。</p></div>
+              <div><span class="evidence-dot internal"></span><strong>内部实测</strong><p>需绑定日期、协议、样本和适用域。</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell">
+      <div class="footer-brand">
+        <strong>万殊智能 MYRIFORM</strong>
+        <span>One Order. Myriad Forms.</span>
+      </div>
+      <p>研究资料预览 · 当前页面不代表公司级标准产品已完成外部验证</p>
+      <a href="#top">BACK TO TOP ↑</a>
+    </footer>
+
+    <dialog class="player" data-player aria-labelledby="player-title">
+      <div class="player-shell">
+        <button class="player-close" type="button" data-close-player aria-label="关闭视频">×</button>
+        <div class="player-video-wrap" data-player-media></div>
+        <div class="player-copy">
+          <div class="player-index" data-player-index></div>
+          <div class="player-main">
+            <p class="player-kicker" data-player-kicker></p>
+            <h2 id="player-title" data-player-title></h2>
+            <p class="player-description" data-player-description></p>
+            <div class="player-facts">
+              <div><span>研究出处</span><strong data-player-paper></strong></div>
+              <div><span>团队角色</span><strong data-player-role></strong></div>
+              <div><span>证据边界</span><strong data-player-boundary></strong></div>
+            </div>
+            <a class="source-link" data-player-source target="_blank" rel="noreferrer">
+              查看论文 / 项目页 <span>↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>

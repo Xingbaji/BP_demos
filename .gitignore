@@ -1,0 +1,9 @@
+# The deployed repository contains code and lightweight poster frames only.
+*.mp4
+*.MP4
+*.mov
+*.webm
+*.avi
+*.zip
+.DS_Store
+
