@@ -16,7 +16,7 @@ export const projects = [
     title: "从单目图像恢复可度量的几何输入",
     cardTitle: "Metric3D v2",
     paper: "Metric3D v2 · TPAMI 2024",
-    role: "沈春华 · 共同作者",
+    role: "沈春华 · 第 9/10 作者",
     description:
       "把开放世界单目图像转换为公制深度与表面法向，为后续几何重建和物理建模提供尺度一致的输入。",
     boundary: "公开团队研究；证明几何感知能力，不等于公司产品交付。",
@@ -28,7 +28,9 @@ export const projects = [
       type: "video",
       src: "https://jugghm.github.io/Metric3Dv2/resource_new/media/demo_full.mp4",
     },
-    source: "https://arxiv.org/abs/2404.15506",
+    mediaSource: "官方项目页 MP4",
+    source: "https://jugghm.github.io/Metric3Dv2/",
+    paperUrl: "https://arxiv.org/abs/2404.15506",
   },
   {
     id: "robosnap",
@@ -38,19 +40,21 @@ export const projects = [
     title: "把一次真实观测转成可编辑、可仿真的场景",
     cardTitle: "RoboSnap",
     paper: "RoboSnap · arXiv 2026",
-    role: "沈春华 · 末位作者",
+    role: "沈春华 · 第 9/9 作者（末位）",
     description:
       "从单次观测构建前景可碰撞资产与背景视觉层，服务于机器人学习与评测中的场景复现和变化生成。",
     boundary: "公开团队研究；项目页 Demo 不代表任意场景均可自动重建。",
     status: "PUBLIC PREPRINT",
-    duration: "00:04",
+    duration: "04:15",
     poster: "./assets/posters/robosnap.jpg",
     video: "robosnap/robosnap_one_shot_real_to_sim_82KTBSiscYM.mp4",
     officialMedia: {
-      type: "video",
-      src: "https://robosnap.github.io/static/robosnap/videos/method/refinement_process_01.mp4",
+      type: "youtube",
+      src: "https://www.youtube-nocookie.com/embed/82KTBSiscYM?rel=0",
     },
+    mediaSource: "官方 YouTube",
     source: "https://robosnap.github.io/",
+    paperUrl: "https://arxiv.org/abs/2607.06699",
   },
   {
     id: "pncg",
@@ -72,7 +76,9 @@ export const projects = [
       type: "video",
       src: "https://xingbaji.github.io/PNCG_project_page/static/videos/demo_low_res.mp4",
     },
+    mediaSource: "官方项目页 MP4",
     source: "https://xingbaji.github.io/PNCG_project_page/",
+    paperUrl: "https://arxiv.org/abs/2405.08001",
     featured: true,
   },
   {
@@ -83,7 +89,7 @@ export const projects = [
     title: "以物理对齐仿真扩展形变操作经验",
     cardTitle: "SIM1",
     paper: "SIM1 · ECCV 2026",
-    role: "周云松 · 一作及通讯；沈星 · 共同作者",
+    role: "周云松 · 第一及通讯作者；沈星 · 第 4/15 作者",
     description:
       "将真实资产、稳定形变求解与类人轨迹生成连接起来，研究合成交互数据对真机策略训练的价值。",
     boundary: "公开团队研究；数字仅绑定论文任务、资产、轨迹与实验协议。",
@@ -95,7 +101,9 @@ export const projects = [
       type: "youtube",
       src: "https://www.youtube-nocookie.com/embed/tsPLa-1Lygw?rel=0",
     },
+    mediaSource: "官方 YouTube",
     source: "https://internrobotics.github.io/sim1.github.io/",
+    paperUrl: "https://arxiv.org/abs/2604.08544",
   },
   {
     id: "forcevla2",
@@ -105,7 +113,7 @@ export const projects = [
     title: "让视觉—语言—动作模型感知并控制接触力",
     cardTitle: "ForceVLA2",
     paper: "ForceVLA2 · CVPR 2026",
-    role: "周云松 · 通讯作者",
+    role: "周云松 · 第 7/14 作者；个人主页标注通讯",
     description:
       "将力觉与混合力—位控制引入 contact-rich 操作，覆盖擦拭、按压与装配等任务。",
     boundary: "公开团队研究；性能数字需绑定论文数据集与五类任务。",
@@ -118,7 +126,9 @@ export const projects = [
       type: "youtube",
       src: "https://www.youtube-nocookie.com/embed/FYOHljOEZz8?rel=0",
     },
-    source: "https://arxiv.org/abs/2603.15169",
+    mediaSource: "官方 YouTube",
+    source: "https://sites.google.com/view/force-vla2/home",
+    paperUrl: "https://arxiv.org/abs/2603.15169",
   },
   {
     id: "gauge",
@@ -128,7 +138,7 @@ export const projects = [
     title: "用真实测量检验仿真与视频世界模型的物理保真度",
     cardTitle: "GAUGE",
     paper: "GAUGE · arXiv 2026",
-    role: "三位核心成员 · 共同署名",
+    role: "沈星 6/15 · 周云松 9/15 · 沈春华 14/15",
     description:
       "以 22 类受控任务覆盖刚体、碰撞、绳索、织物、软体与梁，建立测量对齐的评测范围。",
     boundary: "公开预印本与团队自建 benchmark；22 类表示范围，不表示通过数。",
@@ -141,6 +151,8 @@ export const projects = [
       type: "video",
       src: "https://internrobotics.github.io/GAUGE/trials/slope-contact.mp4",
     },
-    source: "https://arxiv.org/abs/2608.05948",
+    mediaSource: "官方项目页 MP4 · Slope Contact 单个试次",
+    source: "https://internrobotics.github.io/GAUGE/",
+    paperUrl: "https://arxiv.org/abs/2608.05948",
   },
 ];

@@ -8,7 +8,8 @@
 - 视频按需加载：只有打开播放器时才请求 MP4。
 - 内容与页面分离：项目条目维护在 `assets/projects.js`。
 - 媒体与网站分离：首版只读取已验证的官方 MP4 / 官方 YouTube，不提交本地视频。
-- 当前为内部预览，`robots.txt` 禁止搜索引擎收录。
+- 当前为链接预览，页面通过 `robots` meta 请求搜索引擎不收录；公开仓库与已知网址仍可被直接访问。
+- 每个 Demo 都可通过播放器中的“复制此 Demo 链接”生成独立分享地址。
 
 ## 本地预览
 
@@ -45,7 +46,7 @@ window.MYRIFORM_SITE_CONFIG = {
 3. 确认各项目是否允许第三方嵌入 / hotlink；
 4. 对稳定性要求高的视频转码后放入自有对象存储 / CDN；
 5. 在 GitHub 仓库 Settings → Pages 中选择 GitHub Actions；
-6. 若转为正式公开站点，再修改 `robots.txt`。
+6. 若转为正式公开站点，删除 `index.html` 中的 `noindex` meta；项目子路径下的 `robots.txt` 不能代替该设置。
 
 GitHub Pages 只负责静态前端，不提供登录、权限控制、数据库或视频处理。
 
