@@ -1,6 +1,6 @@
 # Official media sources
 
-Checked on 2026-08-25. The deployed site loads only the official project-page MP4 files or official YouTube embeds below. Downloaded working copies under `~/bp_demo` are not part of the site repository.
+Checked on 2026-08-25. Video is supporting material for the article-first research index. The deployed site loads only the official project-page MP4 files or official YouTube embeds below. Downloaded working copies under `~/bp_demo` are not part of the site repository.
 
 | Work | Player source | Type | Check |
 |---|---|---|---|
@@ -11,7 +11,7 @@ Checked on 2026-08-25. The deployed site loads only the official project-page MP
 | ForceVLA2 | `https://www.youtube-nocookie.com/embed/FYOHljOEZz8?rel=0` | Official YouTube embed | `200 text/html` |
 | GAUGE | `https://internrobotics.github.io/GAUGE/trials/slope-contact.mp4` | Official project-page MP4 | `206 video/mp4` |
 
-Each work also has separate paper and project-page links in `assets/projects.js`. Direct-MP4 failures trigger the poster fallback. Cross-origin iframe playback errors are not always observable in JavaScript, so the official project-page and paper links remain visible below every player.
+Each work also has separate paper and project-page links in `assets/projects.js`; both are visible on the research card and in the player. Direct-MP4 failures trigger the poster fallback. Cross-origin iframe playback errors are not always observable in JavaScript, so the official project-page and paper links remain available independently of video playback.
 
 ## Poster provenance
 

@@ -1,15 +1,11 @@
-import { chapters, projects } from "./projects.js";
+import { projects } from "./projects.js";
 
-const chapterRail = document.querySelector("[data-chapter-rail]");
-const filters = document.querySelector("[data-filters]");
-const resultsStatus = document.querySelector("[data-results-status]");
 const projectGrid = document.querySelector("[data-project-grid]");
 const player = document.querySelector("[data-player]");
 const mediaWrap = document.querySelector("[data-player-media]");
 const copyStatus = document.querySelector("[data-copy-status]");
 const config = window.MYRIFORM_SITE_CONFIG || {};
 
-const chapterById = Object.fromEntries(chapters.map((chapter) => [chapter.id, chapter]));
 let currentProjectId = null;
 let lastTrigger = null;
 let copyStatusTimer = null;
@@ -22,7 +18,7 @@ function mediaUrl(path) {
 
 function unavailableMedia(project) {
   return `<div class="media-unavailable">
-    <img src="${project.poster}" alt="${project.cardTitle} 视频封面" />
+    <img src="${project.poster}" alt="${project.cardTitle} 视频封面">
     <div>
       <strong>官方视频暂时无法加载</strong>
       <span>网络策略或源站限制可能阻止嵌入播放，请前往官方项目页观看。</span>
@@ -52,97 +48,65 @@ function playerMedia(project) {
   if (!src) return unavailableMedia(project);
 
   return `<video controls autoplay playsinline poster="${project.poster}" preload="metadata" data-active-video>
-    <source src="${src}" type="video/mp4" />
+    <source src="${src}" type="video/mp4">
     当前浏览器无法播放此视频。
   </video>`;
 }
 
-function renderChapters() {
-  chapterRail.innerHTML = chapters
-    .map(
-      (chapter) => `
-        <li>
-          <button type="button" data-chapter="${chapter.id}" aria-pressed="false">
-            <span>${chapter.number}</span>
-            <strong>${chapter.label}</strong>
-            <small>${chapter.title}</small>
-          </button>
-        </li>`,
-    )
-    .join("");
-}
-
-function renderFilters() {
-  const filterButtons = chapters.map((chapter) => {
-    const count = projects.filter((project) => project.chapter === chapter.id).length;
-    return `<button type="button" class="filter" data-filter="${chapter.id}" aria-pressed="false">
-      ${chapter.title} <span>${String(count).padStart(2, "0")}</span>
-    </button>`;
-  });
-
-  filters.innerHTML = `
-    <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">
-      全部 <span>${String(projects.length).padStart(2, "0")}</span>
-    </button>
-    ${filterButtons.join("")}`;
-}
-
 function projectCard(project) {
-  const chapter = chapterById[project.chapter];
   return `
-    <article class="project-card" data-project-card data-chapter="${project.chapter}">
-      <button type="button" class="project-open" data-project="${project.id}">
-        <span class="project-media">
-          <img src="${project.poster}" alt="${project.cardTitle} 视频封面" width="1600" height="900" loading="lazy" />
-          <span class="project-tint"></span>
-          <span class="project-play" aria-hidden="true">▶</span>
-          <span class="project-duration">${project.duration}</span>
-          <span class="project-status">${project.status}</span>
-        </span>
-        <span class="project-copy">
-          <span class="project-number">${project.index}</span>
-          <span class="project-body">
-            <span class="project-chapter">${chapter.label} · ${chapter.title}</span>
-            <strong>${project.cardTitle}</strong>
-            <span class="project-title">${project.title}</span>
-          </span>
-          <span class="project-arrow" aria-hidden="true">↗</span>
-        </span>
-      </button>
+    <article class="research-card" id="research-${project.id}" aria-labelledby="research-title-${project.id}">
+      <div class="research-visual">
+        <img
+          src="${project.poster}"
+          alt="${project.cardTitle} 研究视频封面"
+          width="1600"
+          height="900"
+          loading="lazy"
+        >
+        <span class="research-tint"></span>
+        <span class="research-status">${project.status}</span>
+        <button class="watch-button" type="button" data-project="${project.id}">
+          <span class="watch-play" aria-hidden="true">▶</span>
+          <span><small>OFFICIAL VIDEO</small>观看视频 · ${project.duration}<span class="sr-only">：${project.cardTitle}</span></span>
+        </button>
+      </div>
+
+      <div class="research-content">
+        <div class="research-topline">
+          <span class="research-index">${project.index}</span>
+          <span class="research-capability">${project.capability} · ${project.capabilityCn}</span>
+        </div>
+        <h3 id="research-title-${project.id}">${project.cardTitle}</h3>
+        <p class="formal-title">${project.formalTitle}</p>
+        <p class="publication">${project.publication}</p>
+
+        <div class="main-work">
+          <span>主要工作</span>
+          <p>${project.mainWork}</p>
+        </div>
+
+        <dl class="research-facts">
+          <div>
+            <dt>代表性结果</dt>
+            <dd>${project.result}</dd>
+          </div>
+          <div>
+            <dt>团队角色</dt>
+            <dd>${project.role}</dd>
+          </div>
+        </dl>
+
+        <div class="research-links">
+          <a href="${project.paperUrl}" target="_blank" rel="noopener noreferrer">论文全文 <span>↗</span></a>
+          <a href="${project.source}" target="_blank" rel="noopener noreferrer">官方项目页 <span>↗</span></a>
+        </div>
+      </div>
     </article>`;
 }
 
 function renderProjects() {
   projectGrid.innerHTML = projects.map(projectCard).join("");
-}
-
-function setFilter(requestedFilter) {
-  const filter = requestedFilter === "all" || chapterById[requestedFilter]
-    ? requestedFilter
-    : "all";
-  const visibleProjects = projects.filter(
-    (project) => filter === "all" || project.chapter === filter,
-  );
-
-  document.querySelectorAll("[data-filter]").forEach((button) => {
-    const isActive = button.dataset.filter === filter;
-    button.classList.toggle("is-active", isActive);
-    button.setAttribute("aria-pressed", String(isActive));
-  });
-
-  chapterRail.querySelectorAll("button[data-chapter]").forEach((button) => {
-    const isActive = button.dataset.chapter === filter;
-    button.classList.toggle("is-active", isActive);
-    button.setAttribute("aria-pressed", String(isActive));
-  });
-
-  document.querySelectorAll("[data-project-card]").forEach((card) => {
-    card.hidden = filter !== "all" && card.dataset.chapter !== filter;
-  });
-
-  resultsStatus.textContent = filter === "all"
-    ? `显示全部 ${visibleProjects.length} 项`
-    : `${chapterById[filter].title} · ${visibleProjects.length} 项`;
 }
 
 function playerField(selector, value) {
@@ -182,13 +146,14 @@ function openProject(projectId, updateUrl = true) {
   copyStatus.textContent = "";
 
   playerField("[data-player-index]", project.index);
-  playerField("[data-player-kicker]", project.kicker);
-  playerField("[data-player-title]", project.title);
-  playerField("[data-player-description]", project.description);
+  playerField("[data-player-kicker]", `${project.capability} · ${project.capabilityCn}`);
+  playerField("[data-player-title]", project.cardTitle);
+  playerField("[data-player-formal-title]", project.formalTitle);
+  playerField("[data-player-description]", project.mainWork);
   playerField("[data-player-media-source]", `视频来源 · ${project.mediaSource}`);
-  playerField("[data-player-paper]", project.paper);
+  playerField("[data-player-publication]", project.publication);
   playerField("[data-player-role]", project.role);
-  playerField("[data-player-boundary]", project.boundary);
+  playerField("[data-player-result]", project.result);
 
   const source = player.querySelector("[data-player-source]");
   const paperLink = player.querySelector("[data-player-paper-link]");
@@ -265,23 +230,7 @@ async function copyProjectLink() {
   }, 2400);
 }
 
-renderChapters();
-renderFilters();
 renderProjects();
-setFilter("all");
-
-filters.addEventListener("click", (event) => {
-  const button = event.target.closest("[data-filter]");
-  if (button) setFilter(button.dataset.filter);
-});
-
-chapterRail.addEventListener("click", (event) => {
-  const button = event.target.closest("[data-chapter]");
-  if (!button) return;
-  setFilter(button.dataset.chapter);
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  document.querySelector("#work").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
-});
 
 projectGrid.addEventListener("click", (event) => {
   const button = event.target.closest("[data-project]");
