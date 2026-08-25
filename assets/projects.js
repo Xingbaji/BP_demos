@@ -102,8 +102,35 @@ export const projects = [
     paperUrl: "https://arxiv.org/abs/2603.15169",
   },
   {
-    id: "robosnap",
+    id: "agile",
     index: "05",
+    field: "交互重建",
+    cardTitle: "AGILE",
+    topic: "从视频恢复可仿真的手—物交互",
+    formalTitle:
+      "AGILE: Hand-object Interaction Reconstruction from Video via Agentic Generation",
+    publication: "ACM SIGGRAPH 2026",
+    publicationType: "会议论文",
+    role: "沈春华｜末位作者",
+    mainWork:
+      "从普通视频恢复完整物体几何与连续的手—物运动：先生成封闭、带纹理的物体模型，再跟踪手与物体在视频中的运动。",
+    result:
+      "在 HO3D、DexYCB、ARCTIC 及自然视频上验证，并展示灵巧手 Real-to-Sim 动作迁移。",
+    duration: "00:06",
+    poster: "./assets/posters/agile.jpg",
+    video:
+      "_from_docx_curated/02_simulation_ready_world/agile_direct/ABF12_retarget.mp4",
+    officialMedia: {
+      type: "video",
+      src: "https://agile-hoi.github.io/static/videos/ABF12_retarget.mp4",
+    },
+    mediaSource: "项目主页视频 · Real-to-Sim 动作迁移",
+    source: "https://agile-hoi.github.io/",
+    paperUrl: "https://arxiv.org/abs/2602.04672",
+  },
+  {
+    id: "robosnap",
+    index: "06",
     field: "Real-to-Sim",
     cardTitle: "RoboSnap",
     topic: "从一张图像生成机器人仿真场景",
@@ -127,8 +154,35 @@ export const projects = [
     paperUrl: "https://arxiv.org/abs/2607.06699",
   },
   {
+    id: "pi3",
+    index: "07",
+    field: "多视角几何",
+    cardTitle: "π³",
+    topic: "从无序图像集合恢复三维几何",
+    formalTitle: "π³: Permutation-Equivariant Visual Geometry Learning",
+    publication: "ICLR 2026",
+    publicationType: "会议论文",
+    role: "沈春华｜共同作者",
+    mainWork:
+      "直接处理顺序任意的多视角图像，同时预测相机位姿和局部三维点图，避免依赖固定参考视角。",
+    result:
+      "在相机位姿估计、单目与视频深度、稠密点图重建等任务中取得领先结果。",
+    duration: "01:44",
+    poster: "./assets/posters/pi3.jpg",
+    video:
+      "_from_docx_curated/01_reality_metric3d_human/pi3_official/project_page/video.mp4",
+    officialMedia: {
+      type: "video",
+      src: "https://yyfz.github.io/pi3/assets/videos/video.mp4",
+    },
+    mediaSource: "项目主页视频 · 三维重建对照",
+    source: "https://yyfz.github.io/pi3/",
+    paperUrl:
+      "https://proceedings.iclr.cc/paper_files/paper/2026/hash/11a09e0aaa74867c6b0719c639fc09f8-Abstract-Conference.html",
+  },
+  {
     id: "metric3d-v2",
-    index: "06",
+    index: "08",
     field: "三维感知",
     cardTitle: "Metric3D v2",
     topic: "从单张图像恢复真实尺度三维信息",
