@@ -3,103 +3,138 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#0b1726">
     <meta name="color-scheme" content="light">
     <meta name="robots" content="noindex, noarchive">
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://xingbaji.github.io/BP_demos/">
-    <meta
-      name="description"
-      content="万殊智能（MYRIFORM）核心团队成员参与的八项公开研究。"
-    >
+    <meta name="description" content="MariForm 万殊智能核心成员的公开研究 Demo：从现实理解、复杂物理到规模化数据与真机验证。">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://xingbaji.github.io/BP_demos/">
-    <meta property="og:title" content="核心团队的代表性研究｜万殊智能 MYRIFORM">
-    <meta
-      property="og:description"
-      content="核心成员参与的八项公开研究，覆盖三维感知、Real-to-Sim、接触仿真、仿真数据、力觉控制与物理评测。"
-    >
+    <meta property="og:title" content="从现实理解到真机闭环｜MariForm 万殊智能">
+    <meta property="og:description" content="八项公开研究 Demo，共同展示现实理解、复杂接触求解、数据扩增、力觉控制与物理评测能力。">
     <meta property="og:image" content="https://xingbaji.github.io/BP_demos/assets/posters/sim1.jpg">
     <meta property="og:image:width" content="1600">
     <meta property="og:image:height" content="900">
-    <meta property="og:image:alt" content="SIM1 形变物体仿真画面">
+    <meta property="og:image:alt" content="SIM1 形变物体仿真与真机迁移演示">
     <meta name="twitter:card" content="summary_large_image">
-    <title>核心团队的代表性研究｜万殊智能 MYRIFORM</title>
+    <title>从现实理解到真机闭环｜MariForm 万殊智能</title>
     <link rel="stylesheet" href="./assets/styles.css">
     <script src="./assets/config.js"></script>
     <script type="module" src="./assets/app.js"></script>
   </head>
   <body>
-    <a class="skip-link" href="#work">跳至代表性成果</a>
+    <a class="skip-link" href="#work">跳至工作 Demo</a>
 
     <header class="site-header" data-header>
-      <a class="brand" href="#top">
-        <strong>万殊智能</strong>
-        <span>MYRIFORM</span>
+      <a class="brand" href="#top" aria-label="MariForm 万殊智能首页">
+        <strong>MariForm</strong>
+        <span>万殊智能</span>
       </a>
 
       <nav class="desktop-nav" aria-label="主导航">
-        <a href="#work">代表性成果</a>
-        <a href="#about">关于本页</a>
+        <a href="#pathway">能力闭环</a>
+        <a href="#work">工作 Demo</a>
+        <a href="#about">说明</a>
       </nav>
 
-      <a class="header-cta" href="#work">查看成果</a>
+      <a class="header-cta" href="#work">观看 Demo</a>
     </header>
 
     <main id="top">
-      <section class="hero section-shell" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">万殊智能 · 研究成果</p>
-          <h1 id="hero-title">核心团队的<br>代表性研究</h1>
-          <p class="hero-lede">
-            这里汇集核心成员参与的八项公开研究，覆盖三维感知、Real-to-Sim、接触仿真、仿真数据、力觉控制与物理评测。
-          </p>
+      <section class="hero">
+        <div class="section-shell hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">PUBLIC RESEARCH DEMOS · 2024—2026</p>
+            <h1>让 AI 知道，<br>接触以后会发生什么</h1>
+            <p class="hero-lede">八项核心成员完成或参与的公开研究，沿现实理解、复杂物理、规模化数据、力觉控制与真实评测展开。它们共同展示一条连续的能力链，而不是彼此孤立的论文。</p>
 
-          <div class="hero-actions">
-            <a class="button button-primary" href="#work">查看八项成果</a>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#work">查看全部工作</a>
+              <button class="button button-secondary" type="button" data-project="sim1">
+                <span class="play-dot" aria-hidden="true">▶</span> 观看代表 Demo
+              </button>
+            </div>
+
+            <p class="hero-note">论文 · 项目主页 · 官方公开视频</p>
           </div>
 
-          <p class="hero-summary">8 项公开成果　·　2024—2026　·　论文、项目主页与公开视频</p>
+          <button class="hero-demo" type="button" data-project="sim1" aria-label="FEATURED DEMO，SIM1，ECCV 2026，物理对齐数据到真机结果，200 条源示范扩展为 10,000+ 合成轨迹，观看研究 Demo">
+            <img src="./assets/posters/sim1.jpg" alt="" width="1600" height="900" fetchpriority="high">
+            <span class="hero-demo-shade" aria-hidden="true"></span>
+            <span class="hero-demo-topline" aria-hidden="true">
+              <span>FEATURED DEMO</span>
+              <span>SIM1 · ECCV 2026</span>
+            </span>
+            <span class="hero-demo-caption" aria-hidden="true">
+              <span class="hero-play" aria-hidden="true">▶</span>
+              <span>
+                <strong>物理对齐数据 → 真机结果</strong>
+                <small>200 条源示范扩展为 10,000+ 合成轨迹</small>
+              </span>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <section class="pathway section-shell" id="pathway" aria-labelledby="pathway-title">
+        <div class="section-intro">
+          <p class="section-label">THE CAPABILITY LOOP</p>
+          <div>
+            <h2 id="pathway-title">从真实世界，走到真机结果</h2>
+            <p>每项工作回答闭环中的一个关键问题：怎样看懂现实、算对接触、扩展经验，并用真实结果校验模型。</p>
+          </div>
         </div>
 
-        <figure class="hero-figure">
-          <img
-            src="./assets/posters/sim1.jpg"
-            alt="SIM1 形变物体仿真演示画面"
-            width="1600"
-            height="900"
-            fetchpriority="high"
-          >
-          <figcaption><span>SIM1</span> 形变物体仿真与真机迁移</figcaption>
-        </figure>
+        <ol class="capability-track">
+          <li><span>01</span><strong>Reality Understanding</strong><small>从图像与视频恢复尺度、几何和交互</small></li>
+          <li><span>02</span><strong>High-Fidelity Physics</strong><small>高效求解复杂接触、自碰撞与形变</small></li>
+          <li><span>03</span><strong>Scalable Data</strong><small>把有限示范扩展为物理对齐经验</small></li>
+          <li><span>04</span><strong>Model &amp; Real Robot</strong><small>让力觉与物理信息进入策略和真机</small></li>
+          <li><span>05</span><strong>Grounded Evaluation</strong><small>以真实测量检验物理结果是否可信</small></li>
+        </ol>
+      </section>
+
+      <section class="evidence" aria-labelledby="evidence-title">
+        <div class="section-shell evidence-grid">
+          <div class="evidence-copy">
+            <p class="section-label">SELECTED EVIDENCE</p>
+            <h2 id="evidence-title">关键能力已经被公开结果验证</h2>
+            <p>这里的数字来自代表论文任务，仅用于说明研究能力与技术连续性。</p>
+          </div>
+          <dl class="evidence-list">
+            <div><dt>100,000+</dt><dd><strong>四面体复杂自碰撞</strong><span>PNCG · 实时级计算</span></dd></div>
+            <div><dt>200 → 10,000+</dt><dd><strong>源示范到物理对齐轨迹</strong><span>SIM1 · 数据扩增</span></dd></div>
+            <div><dt>90%</dt><dd><strong>论文衣物任务真机成功率</strong><span>SIM1 · 纯合成训练、零样本部署</span></dd></div>
+          </dl>
+        </div>
       </section>
 
       <section class="work" id="work" aria-labelledby="work-title">
         <div class="section-shell">
           <div class="section-heading">
             <div>
-              <p class="section-label">代表性成果</p>
-              <h2 id="work-title">八项公开研究</h2>
+              <p class="section-label">SELECTED WORK</p>
+              <h2 id="work-title">沿同一条路线的八项工作</h2>
             </div>
-            <p>以下成果均已公开，可从论文和项目主页查看完整内容。</p>
+            <p>点击画面直接观看官方 Demo；卡片保留最必要的能力说明，完整论文信息与公开结果在播放器中展开。</p>
           </div>
 
           <div class="project-grid" data-project-grid></div>
 
-          <noscript>
-            <p class="noscript">请启用 JavaScript 以浏览研究成果与视频。</p>
-          </noscript>
+          <noscript><p class="noscript">请启用 JavaScript 以浏览研究成果与视频。</p></noscript>
         </div>
       </section>
 
       <section class="about section-shell" id="about" aria-labelledby="about-title">
-        <p class="section-label">说明</p>
+        <p class="section-label">SCOPE &amp; ATTRIBUTION</p>
         <div class="about-grid">
-          <h2 id="about-title">关于这些成果</h2>
+          <h2 id="about-title">这些 Demo<br>说明什么</h2>
           <div>
-            <p>本页汇总核心团队成员参与的公开研究。论文、作者及发表信息以原文为准，视频均来自论文或项目官方页面。</p>
-            <p>公开论文用于说明团队能力，不自动等同于万殊智能的产品或知识产权。公司产品与商业化方案以融资 BP 为准。</p>
+            <p class="about-lede">它们共同证明核心成员已经在现实理解、复杂求解、生成式数据、机器人策略与真实评测上完成关键验证。</p>
+            <p>本页汇总团队核心成员完成或参与的公开研究。论文作者、机构、发表信息及结果以原文为准；视频均来自论文或项目官方页面。</p>
+            <p>公开论文用于说明团队能力与技术路线，不自动等同于 MariForm 已商业化产品、客户成果或全部公司知识产权。</p>
           </div>
         </div>
       </section>
@@ -108,10 +143,10 @@
     <footer class="site-footer">
       <div class="section-shell footer-inner">
         <div class="footer-brand">
-          <strong>万殊智能 MYRIFORM</strong>
+          <strong>MariForm · 万殊智能</strong>
           <span>One law. Myriad Forms. 一理演万殊</span>
         </div>
-        <p>Infrastructure for Physical Intelligence</p>
+        <p>Infrastructure for Physical AI</p>
         <a href="#top">返回顶部 ↑</a>
       </div>
     </footer>
@@ -121,28 +156,22 @@
         <button class="player-close" type="button" data-close-player aria-label="关闭视频">×</button>
         <div class="player-video-wrap" data-player-media></div>
         <div class="player-content">
-          <p class="player-meta">
-            <span data-player-index></span>
-            <span data-player-publication></span>
-          </p>
+          <p class="player-meta"><span data-player-stage></span><span data-player-publication></span></p>
           <h2 id="player-title" data-player-title>研究视频</h2>
           <p class="player-topic" data-player-topic></p>
+          <p class="player-route-proof" data-player-route-proof></p>
           <p class="player-formal-title" data-player-formal-title></p>
           <p class="player-description" data-player-description></p>
           <p class="player-media-source" data-player-media-source></p>
 
           <dl class="player-facts">
-            <div><dt>论文结果</dt><dd data-player-result></dd></div>
-            <div><dt>团队成员</dt><dd data-player-role></dd></div>
+            <div><dt>公开结果</dt><dd data-player-result></dd></div>
+            <div><dt>参与成员</dt><dd data-player-role></dd></div>
           </dl>
 
           <div class="player-links">
-            <a data-player-paper-link href="https://arxiv.org/abs/2405.08001" target="_blank" rel="noopener noreferrer">
-              查看论文 <span>↗</span>
-            </a>
-            <a data-player-source href="https://xingbaji.github.io/PNCG_project_page/" target="_blank" rel="noopener noreferrer">
-              项目主页 <span>↗</span>
-            </a>
+            <a data-player-paper-link href="https://arxiv.org/abs/2405.08001" target="_blank" rel="noopener noreferrer">查看论文 <span>↗</span></a>
+            <a data-player-source href="https://xingbaji.github.io/PNCG_project_page/" target="_blank" rel="noopener noreferrer">项目主页 <span>↗</span></a>
           </div>
         </div>
       </div>

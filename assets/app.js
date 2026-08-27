@@ -52,49 +52,49 @@ function playerMedia(project) {
 }
 
 function projectCard(project) {
+  const displayIndex = String(project.displayOrder).padStart(2, "0");
   return `
     <article class="project-card" id="research-${project.id}" aria-labelledby="research-title-${project.id}">
-      <figure class="project-media">
+      <button class="project-media" type="button" data-project="${project.id}" aria-label="${displayIndex}，${project.stageLabel}，${project.duration}，观看 ${project.cardTitle} 研究 Demo">
         <img
           src="${project.poster}"
-          alt="${project.cardTitle} 研究演示画面"
+          alt=""
           width="1600"
           height="900"
           decoding="async"
         >
-        <figcaption>${project.field}</figcaption>
-      </figure>
+        <span class="project-media-shade" aria-hidden="true"></span>
+        <span class="project-stage" aria-hidden="true">${displayIndex} · ${project.stageLabel}</span>
+        <span class="project-play" aria-hidden="true">▶</span>
+        <span class="project-duration" aria-hidden="true">${project.duration}</span>
+      </button>
 
       <div class="project-content">
         <div class="project-meta">
-          <span>${project.index}</span>
-          <p>${project.publication}<small>${project.publicationType}</small></p>
+          <span>${project.stage}</span>
+          <p>${project.publication}</p>
         </div>
 
         <h3 id="research-title-${project.id}">${project.cardTitle}</h3>
+        <p class="project-route-proof">${project.routeProof}</p>
         <p class="project-topic">${project.topic}</p>
-        <p class="formal-title">${project.formalTitle}</p>
-        <p class="project-summary">${project.mainWork}</p>
-
-        <dl class="project-facts">
-          <div><dt>论文结果</dt><dd>${project.result}</dd></div>
-        </dl>
-
-        <p class="project-team"><span>团队成员</span>${project.role}</p>
 
         <div class="project-actions">
-          <a href="${project.paperUrl}" target="_blank" rel="noopener noreferrer">查看论文 <span>↗</span></a>
-          <a href="${project.source}" target="_blank" rel="noopener noreferrer">项目主页 <span>↗</span></a>
           <button type="button" data-project="${project.id}">
-            <span aria-hidden="true">▶</span> 观看视频 · ${project.duration}<span class="sr-only">：${project.cardTitle}</span>
+            <span aria-hidden="true">▶</span> 观看 Demo<span class="sr-only">：${project.cardTitle}</span>
           </button>
+          <a href="${project.paperUrl}" target="_blank" rel="noopener noreferrer">论文 <span>↗</span></a>
+          <a href="${project.source}" target="_blank" rel="noopener noreferrer">项目主页 <span>↗</span></a>
         </div>
       </div>
     </article>`;
 }
 
 function renderProjects() {
-  projectGrid.innerHTML = projects.map(projectCard).join("");
+  projectGrid.innerHTML = [...projects]
+    .sort((a, b) => a.displayOrder - b.displayOrder)
+    .map(projectCard)
+    .join("");
 }
 
 function playerField(selector, value) {
@@ -131,10 +131,11 @@ function openProject(projectId, updateUrl = true) {
   if (!wasOpen) lastTrigger = document.activeElement;
   currentProjectId = project.id;
 
-  playerField("[data-player-index]", project.index);
+  playerField("[data-player-stage]", project.stage);
   playerField("[data-player-publication]", `${project.publication} · ${project.publicationType}`);
   playerField("[data-player-title]", project.cardTitle);
   playerField("[data-player-topic]", project.topic);
+  playerField("[data-player-route-proof]", project.routeProof);
   playerField("[data-player-formal-title]", project.formalTitle);
   playerField("[data-player-description]", project.mainWork);
   playerField("[data-player-media-source]", `视频来源：${project.mediaSource}`);
@@ -181,7 +182,7 @@ function closePlayer(updateUrl = true) {
 
 renderProjects();
 
-projectGrid.addEventListener("click", (event) => {
+document.addEventListener("click", (event) => {
   const button = event.target.closest("[data-project]");
   if (button) openProject(button.dataset.project);
 });
