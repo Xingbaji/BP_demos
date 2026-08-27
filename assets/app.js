@@ -62,6 +62,7 @@ function projectCard(project) {
           width="1600"
           height="900"
           decoding="async"
+          loading="lazy"
         >
         <span class="project-media-shade" aria-hidden="true"></span>
         <span class="project-stage" aria-hidden="true">${displayIndex} · ${project.stageLabel}</span>

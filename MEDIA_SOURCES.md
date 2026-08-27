@@ -1,6 +1,21 @@
 # Official media sources
 
-Checked on 2026-08-25. Video is supporting material for the research page. The deployed site loads only the official project-page MP4 files or official YouTube embeds below. Downloaded working copies under `~/bp_demo` are not part of the site repository.
+Research sources checked on 2026-08-25. The deployed research player loads only the official project-page MP4 files or official YouTube embeds below. Downloaded research working copies under `~/bp_demo` are not part of the site repository. MariForm engine captures are documented separately below and are self-hosted as explicit company material.
+
+## MariForm engine captures
+
+The four files under `assets/engine/` are web-ready versions of company-provided runtime captures from `~/bp_demo/collect/final/engine_demo/`. They are presented as MariForm-built technology, not as third-party publication media.
+
+| Demo | Capability shown | Duration | Web file |
+|---|---|---:|---|
+| Twist Mat | Deformable-body large deformation and complex self-contact | `00:50` | `assets/engine/twist_mat.mp4` |
+| Wrecking Ball | Stacked rigid bodies, chain constraints, and collision propagation | `00:10` | `assets/engine/wrecking_ball.mp4` |
+| Tactile Force | Rigid–deformable coupling and continuous contact-force response | `00:24` | `assets/engine/tactile_force.mp4` |
+| Hand HOI | Skin–muscle–bone hand model, object contact, and muscle force | `00:19` | `assets/engine/hand_hoi.mp4` |
+
+`twist_mat.mp4` was resized and re-encoded for web delivery; the other three clips were remuxed with fast-start metadata without changing their encoded video stream.
+
+## Public research media
 
 | Work | Player source | Type | Check |
 |---|---|---|---|
