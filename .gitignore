@@ -7,3 +7,5 @@
 *.zip
 .DS_Store
 
+# Curated, web-optimized MariForm engine runtime captures.
+!assets/engine/*.mp4
