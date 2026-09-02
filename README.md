@@ -1,4 +1,4 @@
-# MariForm Research Demos
+# MyriForm Research Demos
 
 这是面向投资人的 Demo 展示页，以自研引擎录屏和公开研究视频为主要内容。
 

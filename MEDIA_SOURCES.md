@@ -1,10 +1,10 @@
 # Official media sources
 
-Research sources initially checked on 2026-08-25; SimGen, SoMA, and EBench were added and checked on 2026-08-27. The deployed research player loads only the official project-page MP4 files or official YouTube embeds below. Downloaded research working copies under `~/bp_demo` are not part of the site repository. MariForm engine captures are documented separately below and are self-hosted as explicit company material.
+Research sources initially checked on 2026-08-25; SimGen, SoMA, and EBench were added and checked on 2026-08-27. The deployed research player loads only the official project-page MP4 files or official YouTube embeds below. Downloaded research working copies under `~/bp_demo` are not part of the site repository. MyriForm engine captures are documented separately below and are self-hosted as explicit company material.
 
-## MariForm engine captures
+## MyriForm engine captures
 
-The four files under `assets/engine/` are web-ready versions of company-provided runtime captures from `~/bp_demo/collect/final/engine_demo/`. They are presented as MariForm-built technology, not as third-party publication media.
+The four files under `assets/engine/` are web-ready versions of company-provided runtime captures from `~/bp_demo/collect/final/engine_demo/`. They are presented as MyriForm-built technology, not as third-party publication media.
 
 | Demo | Capability shown | Duration | Web file |
 |---|---|---:|---|
@@ -35,7 +35,7 @@ Each work also has separate paper and project-page links in `assets/projects.js`
 
 ## Poster provenance
 
-The eleven local posters are lightweight 1600 × 900 navigation thumbnails derived from the corresponding official research media. They are not presented as MariForm-owned results; rights remain with the original publication teams.
+The eleven local posters are lightweight 1600 × 900 navigation thumbnails derived from the corresponding official research media. They are not presented as MyriForm-owned results; rights remain with the original publication teams.
 
 | Work | Frame source | Approx. frame | Local SHA-256 |
 |---|---|---:|---|
