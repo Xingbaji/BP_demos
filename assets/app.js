@@ -77,7 +77,6 @@ function projectCard(project) {
         </div>
 
         <h3 id="research-title-${project.id}">${project.cardTitle}</h3>
-        <p class="project-route-proof">${project.routeProof}</p>
         <p class="project-topic">${project.topic}</p>
 
         <div class="project-actions">
@@ -136,11 +135,7 @@ function openProject(projectId, updateUrl = true) {
   playerField("[data-player-publication]", `${project.publication} · ${project.publicationType}`);
   playerField("[data-player-title]", project.cardTitle);
   playerField("[data-player-topic]", project.topic);
-  playerField("[data-player-route-proof]", project.routeProof);
   playerField("[data-player-formal-title]", project.formalTitle);
-  playerField("[data-player-description]", project.mainWork);
-  playerField("[data-player-media-source]", `视频来源：${project.mediaSource}`);
-  playerField("[data-player-result]", project.result);
   playerField("[data-player-role]", project.role);
 
   const source = player.querySelector("[data-player-source]");
