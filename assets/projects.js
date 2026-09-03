@@ -248,8 +248,8 @@ export const projects = [
     cardTitle: "SimGen",
     topic: "用仿真条件生成可控现实场景",
     formalTitle: "SimGen: Simulator-conditioned Driving Scene Generation",
-    publication: "arXiv · 2024",
-    publicationType: "预印本",
+    publication: "NeurIPS 2024",
+    publicationType: "会议论文",
     role: "周云松｜第一作者",
     mainWork:
       "以仿真布局和文本提示为条件，通过级联扩散把仿真场景转化为外观与布局均可控的现实驾驶场景。",
