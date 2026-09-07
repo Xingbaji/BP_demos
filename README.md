@@ -4,12 +4,12 @@
 
 ## 当前结构
 
-- 单页结构：简短页头 → 四项自研引擎 Demo → 十一项公开研究 Demo → 简要归属说明。
+- 单页结构：简短页头 → 四项自研引擎 Demo → 十二项公开研究 Demo → 简要归属说明。
 - 公司能力优先：`assets/engine/` 中的四段真实运行录屏单独成区，与第三方发表体系下的公开研究明确区分。
-- Demo 优先：自研引擎录屏直接嵌入页面；点击任意公开研究卡片可播放官方 MP4 / YouTube，论文与项目主页保留为核验入口。
+- Demo 优先：自研引擎录屏直接嵌入页面；公开研究卡片播放官方 MP4 / YouTube 或指定的本地素材，保留论文与项目主页入口。
 - 视频按需加载：自研引擎视频和公开研究媒体都只在用户点击播放后请求，首屏不下载 MP4 或 YouTube embed。
 - 内容与页面分离：项目条目维护在 `assets/projects.js`。
-- 媒体来源分离：公开研究仍只读取已验证的官方 MP4 / 官方 YouTube；四段公司自研引擎网页版本位于 `assets/engine/`。
+- 媒体来源分离：十一项研究使用官方 MP4 / YouTube；Tac2Real 使用用户指定的视频，位于 `assets/research/tac2real.mp4`；四段公司自研引擎视频位于 `assets/engine/`。
 - 当前为链接预览，页面通过 `robots` meta 请求搜索引擎不收录；公开仓库与已知网址仍可被直接访问。
 - 视频播放器支持带 `?work=<id>` 参数的单项地址。
 
@@ -26,7 +26,7 @@ python3 -m http.server 8000
 
 ## 媒体模式
 
-`assets/config.js` 当前固定为 `official`：此设置只控制十一项公开研究 Demo，播放 `projects.js` 中登记的官方 MP4 或官方 YouTube embed。直链失效时显示封面，并回退到论文 / 项目页。自研引擎视频始终读取 `assets/engine/` 中的网页版本。
+`assets/config.js` 当前固定为 `official`：十一项研究 Demo 使用 `projects.js` 中登记的官方 MP4 或 YouTube embed。Tac2Real 的 `hostedMedia` 始终优先读取站内视频。媒体失败时保留封面与项目主页入口；自研引擎视频读取 `assets/engine/`。
 
 若后续改用自有对象存储，可把模式改为 `local`，并把 `mediaBaseUrl` 设置为 HTTPS 媒体源：
 
@@ -44,7 +44,7 @@ window.MYRIFORM_SITE_CONFIG = {
 本目录可以作为独立仓库根目录。工作流位于 `.github/workflows/deploy-pages.yml`。首次发布前：
 
 1. 关闭素材版权、肖像、场地与机构外发授权；
-2. 只上传网站代码和轻量 poster；
+2. 只上传网站代码、轻量 poster 和明确选定的网页视频；
 3. 确认各项目是否允许第三方嵌入 / hotlink；
 4. 对稳定性要求高的视频转码后放入自有对象存储 / CDN；
 5. 在 GitHub 仓库 Settings → Pages 中选择 GitHub Actions；

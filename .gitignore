@@ -1,4 +1,4 @@
-# The deployed repository contains code and lightweight poster frames only.
+# Video files are excluded except for the selected web-ready demos below.
 *.mp4
 *.MP4
 *.mov
@@ -9,3 +9,6 @@
 
 # Curated, web-optimized MyriForm engine runtime captures.
 !assets/engine/*.mp4
+
+# User-selected Tac2Real research demo.
+!assets/research/tac2real.mp4

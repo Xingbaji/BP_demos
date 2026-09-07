@@ -1,6 +1,16 @@
 # Official media sources
 
-Research sources initially checked on 2026-08-25; SimGen, SoMA, and EBench were added and checked on 2026-08-27. The deployed research player loads only the official project-page MP4 files or official YouTube embeds below. Downloaded research working copies under `~/bp_demo` are not part of the site repository. MyriForm engine captures are documented separately below and are self-hosted as explicit company material.
+Research sources initially checked on 2026-08-25; SimGen, SoMA, and EBench were added on 2026-08-27. Eleven research players use official project MP4 files or YouTube embeds. Tac2Real was added on 2026-09-07 using the user-selected local video documented below. Other downloaded working copies are not deployed. MyriForm engine captures are documented separately as company material.
+
+## Tac2Real user-provided video
+
+- Source: `/home/pjlab/bp_demo/collect/final/tac2real1.mp4`, explicitly selected by the user for publication.
+- Deployed: `assets/research/tac2real.mp4`; 21.27 seconds, 1280 × 960, H.264 / AAC. Remuxed with `+faststart`, with no re-encoding or audio removal.
+- Source SHA-256: `ad7dcab25f7718874b36ea5dd5729df835b8f7f432f4ad1f4b6926de0c3c0caa`.
+- Deployed SHA-256: `e1facee5776cd58fd4e0986d12c75a1b355c4f7b060200b4d18d4f57947fb9d2`.
+- Poster: `assets/posters/tac2real.jpg`, frame at 00:06, padded to 1600 × 900 without cropping; SHA-256 `fad121954d123bd8c35542e23fede1ef52af335058b81672c3318522aeab1608`.
+- Project: https://ningyurichard.github.io/tac2real-project-page/ ; paper: https://arxiv.org/abs/2603.28475 . Title and authors checked against the project page; ECCV 2026 follows the supplied BP materials.
+- Presented as research media, not company-owned engine material. The video is hosted with the website rather than attributed as an official remote MP4.
 
 ## MyriForm engine captures
 

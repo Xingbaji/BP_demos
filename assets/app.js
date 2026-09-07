@@ -26,7 +26,7 @@ function unavailableMedia(project) {
 }
 
 function playerMedia(project) {
-  const useOfficial = config.mediaMode === "official";
+  const useOfficial = !project.hostedMedia && config.mediaMode === "official";
   if (useOfficial && project.officialMedia?.type === "youtube") {
     return `<iframe
       src="${project.officialMedia.src}"
@@ -39,9 +39,9 @@ function playerMedia(project) {
     ></iframe>`;
   }
 
-  const src = useOfficial && project.officialMedia?.type === "video"
+  const src = project.hostedMedia?.src || (useOfficial && project.officialMedia?.type === "video"
     ? project.officialMedia.src
-    : mediaUrl(project.video);
+    : mediaUrl(project.video));
 
   if (!src) return unavailableMedia(project);
 
