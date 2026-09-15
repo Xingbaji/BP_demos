@@ -25,7 +25,7 @@
     <script type="module" src="./assets/app.js"></script>
   </head>
   <body>
-    <a class="skip-link" href="#engine">跳至 Demo</a>
+    <a class="skip-link" href="#latest">跳至 Demo</a>
 
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="MyriForm 万殊智能首页">
@@ -34,11 +34,12 @@
       </a>
 
       <nav class="desktop-nav" aria-label="主导航">
+        <a href="#latest">Latest</a>
         <a href="#engine">Engine</a>
         <a href="#work">Research</a>
       </nav>
 
-      <a class="header-cta" href="#engine">View Demos</a>
+      <a class="header-cta" href="#latest">View Demos</a>
     </header>
 
     <main id="top">
@@ -50,7 +51,8 @@
             <p class="hero-lede">MyriForm Engine · Research Demos</p>
 
             <div class="hero-actions">
-              <a class="button button-primary" href="#engine">Engine Demos</a>
+              <a class="button button-primary" href="#latest">Latest Demos</a>
+              <a class="button button-secondary" href="#engine">Engine Demos</a>
               <a class="button button-secondary" href="#work">Research Demos</a>
             </div>
 
@@ -74,11 +76,60 @@
         </div>
       </section>
 
+      <section class="engine" id="latest" aria-labelledby="latest-title">
+        <div class="section-shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-label">01 · LATEST DEMOS</p>
+              <h2 id="latest-title">Latest Demos</h2>
+            </div>
+            <p>3 DEMOS · 重建、物理修正与全模态仿真</p>
+          </div>
+          <div class="engine-grid latest-grid">
+            <article class="engine-card" id="physics-refinement">
+              <video controls playsinline preload="none" poster="./assets/demos/agile_sm2_physics_refinement_demo_cropped.jpg" aria-label="播放手物动作重建、物理修正与机械手迁移">
+                <source src="./assets/demos/agile_sm2_physics_refinement_demo_cropped.mp4" type="video/mp4">
+                当前浏览器无法播放此视频。
+              </video>
+              <div class="engine-card-content">
+                <p>HAND–OBJECT INTERACTION · 00:21</p>
+                <h3>Physics Refinement</h3>
+                <strong>手物动作重建、物理修正与机械手迁移</strong>
+              </div>
+            </article>
+
+            <article class="engine-card" id="material-estimation">
+              <video controls playsinline preload="none" poster="./assets/demos/dinosaur_visual_material_demo_v2_matched.jpg" aria-label="播放弹性体手物重建与杨氏模量估计">
+                <source src="./assets/demos/dinosaur_visual_material_demo_v2_matched.mp4" type="video/mp4">
+                当前浏览器无法播放此视频。
+              </video>
+              <div class="engine-card-content">
+                <p>DEFORMABLE MATERIAL · 00:20</p>
+                <h3>Material Estimation</h3>
+                <strong>弹性体手物重建与杨氏模量估计</strong>
+              </div>
+            </article>
+
+            <article class="engine-card" id="omnimodal-simulation">
+              <video controls playsinline preload="none" poster="./assets/demos/vem_boiling_lid_eccentric_half_speed_preview.jpg" aria-label="播放同步呈现运动、温度、压力与受力">
+                <source src="./assets/demos/vem_boiling_lid_eccentric_half_speed_preview.mp4" type="video/mp4">
+                当前浏览器无法播放此视频。
+              </video>
+              <div class="engine-card-content">
+                <p>OMNIMODAL PHYSICS · 00:25 · 0.50× 慢放</p>
+                <h3>Omnimodal Simulation</h3>
+                <strong>同步呈现运动、温度、压力与受力</strong>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="engine" id="engine" aria-labelledby="engine-title">
         <div class="section-shell">
           <div class="section-heading">
             <div>
-              <p class="section-label">01 · COMPANY-BUILT</p>
+              <p class="section-label">02 · COMPANY-BUILT</p>
               <h2 id="engine-title">MyriForm Engine</h2>
             </div>
             <p>4 DEMOS · RUNTIME CAPTURES</p>
@@ -142,7 +193,7 @@
         <div class="section-shell">
           <div class="section-heading">
             <div>
-              <p class="section-label">02 · PUBLISHED WORK</p>
+              <p class="section-label">03 · PUBLISHED WORK</p>
               <h2 id="work-title">Research Demos</h2>
             </div>
             <p>12 DEMOS</p>

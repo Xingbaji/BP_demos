@@ -12,3 +12,6 @@
 
 # User-selected Tac2Real research demo.
 !assets/research/tac2real.mp4
+
+# Three user-selected BP demos.
+!assets/demos/*.mp4

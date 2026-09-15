@@ -62,3 +62,13 @@ The eleven local posters are lightweight 1600 × 900 navigation thumbnails deriv
 | EBench | Official `peg_in_hole_right.mp4` listed above | `00:52`, 16:9 crop | `fd1965557f37b7a35a72de8122dee7de2673aecc42fcc26705ae47d716459251` |
 
 The GAUGE player is one `Slope Contact` physical trial from the 22-category benchmark scope; it is not a complete benchmark reel or a pass-count claim.
+
+## User-selected BP demos · 2026-09-15
+
+Three source videos from `/home/pjlab/BP_writer/demo_video/`, selected by the user for this webpage. Descriptions follow that directory’s README. Web copies in `assets/demos/` preserve all encoded streams and use MP4 fast-start metadata. JPEG posters are extracted without cropping. These are presented separately from published research and the existing engine captures.
+
+| Demo | Source / web filename | Poster frame | Source SHA-256 | Web SHA-256 |
+|---|---|---|---|---|
+| Physics Refinement | `agile_sm2_physics_refinement_demo_cropped.mp4` | 6s | `a5a5968872c7d080f086d593ad573810f2539126c2bf571bd04c84d57ac8cd84` | `a5a5968872c7d080f086d593ad573810f2539126c2bf571bd04c84d57ac8cd84` |
+| Material Estimation | `dinosaur_visual_material_demo_v2_matched.mp4` | 8s | `a6c2ebf2a73eeae53d1c1b9b10db95d5fb3928d37a54532ef678e94d22436998` | `a6c2ebf2a73eeae53d1c1b9b10db95d5fb3928d37a54532ef678e94d22436998` |
+| Omnimodal Simulation | `vem_boiling_lid_eccentric_half_speed_preview.mp4` | 12s | `8f23ec2e49a4a5c487635bf6a005826b0b2c7edf2f704e36e5132fc46159f307` | `8f23ec2e49a4a5c487635bf6a005826b0b2c7edf2f704e36e5132fc46159f307` |
